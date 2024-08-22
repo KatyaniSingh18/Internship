@@ -1,0 +1,42 @@
+def task():
+    tasks = [] #empty list
+    
+    print("---WELCOME TO to-do List MANGAGER---")
+    
+    total_task = int(input("Enter the no. of tasks you want to add = ")) #for e.g = 4
+    for i in range(1, total_task+1):
+        task_name = input(f"Enter Task {i} = ") 
+        tasks.append(task_name)
+    #  display tasks
+    print(f"Today's tasks are \n {tasks}")    
+    
+    while True:
+        operation = int(input("Enter 1-Add\n2-Update\n3-Delete\n4-View\n5-Exit\n"))
+        # using match 
+        # case statement
+        match operation:
+            case 1:
+                add = input("Enter task you want to add :  ")
+                tasks.append(add) 
+                print(f"Task : {add} has been added successfully.")
+            case 2:
+                update_task = input("Enter task  name you want to update :  ")
+                if update_task in tasks:
+                    up = input("Enter new task : ")
+                    ind = tasks.index(update_task)
+                    tasks[ind] = up
+                    print(f"updated task {up}")
+                    print("Task has been updated successfully.")
+                else :
+                    print("Task not founded in the list.")    
+            case 3:
+                del_task = input("Enter task  name you want to delete :  ") 
+                ind = tasks.index(del_task)
+                del tasks[ind]  
+                print(f"Task : {del_task} has been deleted successfully.")
+            case 4:  
+                print(f"List of tasks are = {tasks}")   
+            case 5:
+                print("Exiting Task Manager.")    
+                break
+task()
