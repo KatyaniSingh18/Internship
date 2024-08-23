@@ -1,0 +1,36 @@
+def calculator() :
+   print("---Welcome to Simple Calculator---")
+   # taking input from the users
+   a = int(input("Enter the first number : "))
+   b = int(input("Enter the second number : "))
+   # displaying the inputed numbers.
+   print(f"Inputed numbers are : {a} and {b}")
+   # asking user to select operation as per choice i.e 1 for addition of the given inputs.
+   ch = int(input("Enter the operation you want to perform.\n1-Addition\n2- Subtraction\n3-Multiplication\n4-Division\n5-Modulous\nEnter here : "))
+   print("\n")
+   print("Your selected operation is = ",ch) #displaying user's choice.
+   print("\n")
+    # using if-elif conditional statement
+   if ch==1 : 
+     print(f"Addition of {a} and {b} is : ", (a+b)) #for addtion
+   elif ch==2 :
+    print(f"Subtraction of {a} and {b} is : ", (a-b)) #for subtraction
+   elif ch==3 :
+     print(f"Multiplication of {a} and {b} is : ", (a*b)) #for multiplication
+   elif ch==4 :
+    print(f"Division of {a} and {b} is : ", (a/b)) #for division
+   elif ch==5 :
+     print(f"Modulous of {a} and {b} is : ", (a%b)) #for mod
+   else :
+     print("Invalid choice.\n Please enter the valid choice.")    
+      # end of program
+      # calling the function
+
+calculator()
+
+
+
+
+
+
+
