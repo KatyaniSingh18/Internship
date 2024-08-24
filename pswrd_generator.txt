@@ -1,0 +1,22 @@
+def password():
+    print("WELCOME TO PASSWORD GENERATOR!!")
+
+    import random 
+    import string
+    length=int(input("Enter the desired length of password :  ")) #asking length of password from user i.e 4,7 etc.
+    
+    lower=string.ascii_lowercase #forlowercase alphabets(a,d,f,g,i,tetc.)
+    upper=string.ascii_uppercase #for uppercase alphabets(A,G,U,O,M etc.)
+    symbols=string.punctuation #for symbols(!,#,@,$,&)
+    numbers=string.digits #for numbers(1,5,7,8 etc.)
+    
+    combine=lower+upper+symbols+numbers #combining them together
+    
+    random=random.sample(combine, length) # taking alphabets,numbers,symbols randomly from combine variable, as per the inputed length
+    pswrd="".join(random) #displaying password in the form of a string
+    
+    print(pswrd) #displaying generated password
+    
+    password() # asking user length of password again to generate a new pasword
+
+password()
